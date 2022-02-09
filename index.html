@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url(Bolsonaro-and-fish.jpg);
+            text-align: center;
+        }
+
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            background-image: url(ace\ vascaino.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 700px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            color: #030207;
+            text-shadow: 5px 5px 5px rgb(16, 153, 27);
+        }
+
+        input, textarea {
+            width: 200px;
+            padding: 10px;
+            color: rgb(37, 17, 59);
+            margin-left: 20px;
+            margin-top: 10px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border: 1px solid;
+        }
+
+        input:hover, textarea:hover, input:focus, textarea:focus {
+            border-color: #000066;
+            box-shadow: 5px 0px 9px royalblue;
+            background-color: #66FFFF;
+            color: black;
+            font-weight: bold;
+        }
+
+        .enviar {
+            background-color: #00aa25;
+            height: 40px;
+            width: 100px;
+            font-weight: bold;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border: 1px solid;
+            color: black;
+        }
+
+        textarea {
+            width: 400px;
+            height: 120px;
+            line-height: 20px;
+            max-width: 400px;
+        }
+
+        form label {
+            margin-left: 20px;
+            color: #410606;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<form name="meu_form">
+    <h1>Entre em contato para jogar um mine</h1>
+    <input type="text" id="nomeid" placeholder="Nick" required="required" name="Nick do mine" />
+    <label for="nome">Nome</label> 
+    <br>
+    <br>
+    <input type="tel" id="foneid" placeholder="discord" name="Nome no discord" />
+    <label for="fone">Fone</label> 
+    <br>
+    <br>
+    <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+    <label for="email">Email</label> 
+    <br>
+    <br>
+    <textarea placeholder="Deixe sua opnião"></textarea>
+    <br>
+    <br>
+    <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" /> 
+    <br>
+    <script>
+        function Enviar() {
+
+            var nome = document.getElementById("nomeid");
+
+            if (nome.value != "") {
+                alert('Obrigado ' + nome.value + ' amanha te chamo para jogar mine');
+            }
+
+            }
+    </script>
+</form>
+</body>
+</html>
